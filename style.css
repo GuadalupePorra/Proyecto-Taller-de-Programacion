@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rubik:wght@300;400;500;600;800&display=swap');
+
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+a{
+    text-decoration: none;
+}
+
+*::selection{
+    background-color: violet;
+    color: black;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(204, 65, 204);
+    border-radius: 5rem;
+}
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: rgba(199, 95, 224, 0.308);;
+    backdrop-filter: blur(50px);
+    text-transform: capitalize;
+}
+
+.header .f{
+    position:relative;
+    display: flex;
+    height: 7rem;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .f .logo{
+    font-size: 1.8rem;
+    color:white;
+    margin: 0 4rem;
+}
+
+.header .f .navbar a{
+    margin: 0 5rem;
+    color: white;
+    font-size: 2.2rem;
+}
+
+.header .f .navbar a.active,
+.header .f .navbar a:hover{
+    color:#FFE600;
+}
+
+#menu{
+    cursor: pointer;
+    color: white;
+    display: none;
+    font-size: 2.5rem;
+}
+
+.home{
+    display:flex;
+    background: url(imagenes/fondo1.png) no-repeat;
+    background-size: cover;
+    min-height: 72rem;
+}
+
+.home .interno{
+    flex: 1 1 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .interno .content{
+    flex:1 1 40rem;
+    align-content: center;
+}
+
+.home .interno .content h1{
+    font-size: 12rem;
+    font-weight: 800;
+    color: white;
+    padding-left: 40%;
+}
+
+span{
+    color: #FFE600;
+}
+
+.about{
+    background-image: url(imagenes/about.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.about .interno{
+    margin: 0 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    flex-direction:row;
+}
+
+.about .interno img{
+    width:40rem;
+}
+.about .interno .content{
+    flex: 1 1 20rem;
+    text-align:justify;
+    padding-left: 5rem;
+}
+
+.about .interno .content h3{
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size:8rem;
+    text-align: left;
+}
+
+.about .interno .content h3 span{
+    font-family: 'Caveat', cursive;
+}
+
+.about .interno .content p{
+    font-size:2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+.about .interno .content .pFinal {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.about .interno .content .pFinal .und{
+    font-family: 'Caveat', cursive;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-decoration:underline wavy #FFE600;
+}
+
+.info .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
+    gap:.2rem;
+
+}
+
+.info .container .box{
+    background-color: #DA98F1;
+    display: flex;
+    padding:  1rem 12rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.info .container .box i{
+    font-size: 2rem;
+    align-self: center;
+}
+
+.info .container .box p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cursos{
+    background-image: url(imagenes/curs.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.titulo{
+    font-size: 4rem;
+    color: #9803CC;
+    font-weight: 600;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.cursos .container{
+    display: flex;
+    align-items: center; 
+    gap: 2rem;
+    margin: 10rem 0;
+}
+.cursos .container .imgCursos{
+    flex: 1 1 20rem;
+    width: 20rem;
+    margin-left: 5rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    background-color: #9803CC;
+    color:#FFE600;
+    border: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover{
+    background-color: #FFE600;
+    color: #9803CC;
+}
+
+.cursos .slide{
+    width: 10rem;
+    height: 40rem;
+    border-radius:1rem ;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3rem;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.cursos .slide img{
+    display:flex;
+    width: 90%;
+    margin: 0 2rem;
+    border-radius:1rem ;
+}
+
+.cursos .slide h4{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.cursos .slide h6{
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+
+}
+
+.cursos .slide p{
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: justify;
+
+}
+
+.swiper-pagination-bullet{
+    background-color: #DA98F1;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #FFE600;
+}
+
+.reviews{
+    background: url(imagenes/Reviews.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+}
+
+.reviews .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin:0 18rem;
+    margin-bottom: 15rem;
+    gap:3rem;
+}
+
+.reviews .container .box{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.295);
+    width: 30rem;
+    height: 20rem;
+}
+
+.reviews .container .box i.quote{
+    font-size: 1rem;
+}
+
+.reviews .container .box p{
+    font-size:1.5rem;
+}
+
+.reviews .container .info img{
+    width:7rem;
+    border-radius: 10rem;
+}
+
+.reviews .container .info{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin:1rem;
+    align-content: center;
+}
+.reviews .container .info .nom{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-right: 2rem;
+    color: #DA98F1;
+    border-right: #DA98F1 .2rem solid;
+}
+
+.contact .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 5rem 15rem;
+}
+
+.contact .container .img{
+    flex: 1 1 20rem;
+    width: 20rem;
+}
+
+.contact .container form {
+    flex: 1 1 40rem;
+    background-color: #DA98F1;
+    padding: 5rem;
+    border-radius: 5rem;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.contact .container form .box{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-color: #FFE600;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    padding: 1.4rem;
+}
+
+.contact .container form span{
+    font-size: 2rem;
+    color: white;
+}
+
+.footer{
+    background-image: url(imagenes/footer.png);
+    background-size: cover;
+    min-height: 20rem;
+    text-align: center;
+    align-items: center;
+}
+ 
+.footer .sm a{
+    margin-top: 8rem;
+    margin-left: 1rem;
+    width:4.5 rem;
+    line-height: 4.5rem;
+    color:white;
+    font-size: 3.5rem;
+}
+
+.footer .sm a:hover{
+    color: #FFE600;
+}
+
+.footer .copy{
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+
+.cursito {
+    background-color: #DA98F1;
+    padding: 2rem;
+    display: flex;
+    margin: 11rem 5rem;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.titCurso{
+    display: flex;
+   background-image: url(imagenes/fCursos.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment:fixed;
+}
+
+.titCurso .interno{
+    text-align: center;
+    align-content: center;
+    margin: 15rem 0;
+    align-self: center;
+    gap: 3rem;
+    flex-direction:row;
+}
+
+.titCurso .interno h1{
+    font-size: 8rem;
+    color: white;
+    margin: 0 20rem;
+
+}
+
+.descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(imagenes/fCursos2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-attachment:fixed;
+   flex-direction:column;
+
+}
+.descripcion h1{
+    text-align: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #9803CC;
+    margin: 5rem 0;
+}
+.descripcion .interno{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem 10rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+.descripcion .interno img{
+    width: 35rem;
+    flex: 1 1 20rem;
+}
+
+.descripcion .contenido{
+    flex: 1 1 20rem;
+}
+
+.descripcion .interno  .contenido h3{
+    color: #DA98F1;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+.descripcion .interno .contenido p{
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    text-align: justify;
+    line-height:3rem;
+    
+}
+
+.contenido{
+    background-image: url(imagenes/contenidoCur.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-attachment:fixed;
+}
+
+.contenido h1{
+    text-align: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #9803CC;
+    margin: 5rem 0;
+}
+
+.contenido .contenedor {
+    display: flex;
+    flex-direction: column;
+    background-color: #d998f1d7;
+    padding: 5rem;
+    margin: 2rem 20rem;
+}
+
+.contenido .contenedor li{
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.contenido .contenedor p{
+    line-height: 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+
+.otro{
+    display: flex;
+    background-image: url(imagenes/otro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   background-attachment:fixed;
+   justify-content: center;
+   align-items: center; 
+}
+
+.otro .margen{
+    text-align: center;
+}
+.otro h1{
+    text-align: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #9803CC;
+    margin: 5rem 0;
+}
+
+.otro .faq-contenedor{
+    display: flex;
+    max-width: 90rem;
+    row-gap: 5rem;
+    gap: 8rem;
+}
+
+.otro .faq-contenedor h2{
+    text-align: left;
+    font-size: 2rem;
+    color: #DA98F1;
+}
+
+.otro .faq-contenedor p{
+    text-align: justify;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+hr{
+    margin: 3rem 0;
+    border-color: #DA98F1;
+}
+.otro .faq{
+    flex: 1 1 40rem;
+}
+.otro .contacta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 40rem;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px){
+    html{
+        font-size: 55%;
+    }
+
+    #menu{
+        display: inline-block;
+    }
+
+    .header .f .navbar{
+        position: fixed;
+        top:90%; left: 0; right: 0;
+        width: 100%;
+        border-top: .1rem solid white;
+        border-bottom: .1rem solid white;
+        background-color: rgba(198, 95, 224, 0.651);
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+    }
+
+    .header .f .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .f .navbar a{
+        display: block;
+        margin: 3rem; 
+     }
+
+    .home .interno .content{
+        font-size: 5rem;
+    }
+
+     .home .interno .content h1{
+        font-size: 8rem;
+    }
+
+    .contenido .contenedor {
+        width: 100%;
+        margin: 0;
+    }
+
+    .faq-contenedor {
+        flex-direction: column;
+    }
+    
+    .faq,
+    .contacta {
+        width: 100%; 
+        padding: 5rem;
+        justify-content: center;
+        justify-items: center;
+    }
+
+
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    }
+    #menu{
+        display: inline-block;
+    }
+
+    .header .f .navbar{
+        position: fixed;
+        top:90%; left: 0; right: 0;
+        width: 100%;
+        border-top: .1rem solid white;
+        border-bottom: .1rem solid white;
+        background-color: rgba(198, 95, 224, 0.651);
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+    }
+
+    .header .f .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .f .navbar a{
+        display: block;
+        margin: 3rem; 
+     }
+
+     .home{
+        min-height:45rem;
+    } 
+     .home .interno .content h1{
+        font-size: 8rem;
+    }
+
+    .about .interno{
+        margin: 4rem 0;
+    }
+    .about .interno .content h3{
+        font-size: 7rem;
+    }
+    
+    .contenido .contenedor {
+        width: 100%;
+        margin: 0;
+    }
+
+    .faq-contenedor {
+        flex-direction: column;
+    }
+    
+    .faq,
+    .contacta {
+        width: 100%; 
+        padding: 5rem;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    
+}
+
+@media (max-width:400px){
+    html{
+        font-size: 30%;
+    }
+
+    .home .interno .content h1{
+        font-size: 5rem;
+    }
+
+
+   
+}
