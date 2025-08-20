@@ -607,14 +607,7 @@ hr{
 
 
 
-
-
-
-
-
-
-
-@media (max-width:800px){
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     html{
         font-size: 55%;
     }
@@ -647,7 +640,7 @@ hr{
     }
 
      .home .interno .content h1{
-        font-size: 8rem;
+        font-size: 10rem;
     }
 
     .contenido .contenedor {
@@ -670,7 +663,7 @@ hr{
 
 }
 
-@media (max-width:600px){
+@media only screen and (min-width: 768px) and (max-width: 991px){
     html{
         font-size: 50%;
     }
@@ -688,6 +681,10 @@ hr{
         clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
     }
 
+    .header .f .logo {
+        font-size: 3rem;
+    }
+
     .header .f .navbar.active{
         clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
     }
@@ -695,20 +692,18 @@ hr{
     .header .f .navbar a{
         display: block;
         margin: 3rem; 
+        font-size: 4rem;
      }
 
      .home{
         min-height:45rem;
     } 
      .home .interno .content h1{
-        font-size: 8rem;
+        font-size: 10rem;
     }
 
-    .about .interno{
-        margin: 4rem 0;
-    }
-    .about .interno .content h3{
-        font-size: 7rem;
+    .reviews .container{
+        justify-content: center;
     }
     
     .contenido .contenedor {
@@ -731,16 +726,72 @@ hr{
     
 }
 
-@media (max-width:400px){
+@media only screen and (max-width: 767px) {
     html{
         font-size: 30%;
     }
 
-    .home .interno .content h1{
-        font-size: 5rem;
+    #menu{
+        display: inline-block;
+    }
+
+    .header .f {
+        height: 15rem;
+    }
+
+    .header .f .navbar{
+        position: fixed;
+        top:90%; left: 0; right: 0;
+        width: 100%;
+        border-top: .1rem solid white;
+        border-bottom: .1rem solid white;
+        background-color: rgba(198, 95, 224, 0.651);
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+    }
+
+    .header .f .logo {
+        font-size: 3rem;
+    }
+
+    .header .f .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+    }
+
+    header .f .navbar.active a{
+        display: block;
+        margin: 3rem; 
+        font-size: 4rem;
+     }
+
+     .info .container{
+        display: inline-flex;
+     }
+    .info .container .box {
+        padding: 1rem 4rem
     }
 
 
-   
-}
+    .home .interno .content h1{
+        padding-left: 20rem;
+        font-size: 8rem;
+       margin: 0 5rem;
+    }
+    .cursos .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10rem;
+    }
+    .cursos .container .imgCursos {
+        order: 1; 
+        margin-bottom: 20px; 
+    }
+    .cursos .container .swiper {
+        width: 100%; 
 
+    }
+
+    .descripcion .interno{
+        display: flex;
+        flex-direction: column;
+    }
+}
