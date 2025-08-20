@@ -246,8 +246,6 @@ span{
 }
 
 .cursos .slide{
-    width: 10rem;
-    height: 40rem;
     border-radius:1rem ;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 3rem;
@@ -286,12 +284,27 @@ span{
 
 }
 
-.swiper-pagination-bullet{
-    background-color: #DA98F1;
+.cursos .swiper {
+    max-width: 900px;
+    height: 500px;
+}
+.cursos .swiper-wrapper {
+    display: flex;
 }
 
-.swiper-pagination-bullet-active{
-    background-color: #FFE600;
+.cursos .swiper-wrapper .swiper-slide {
+    flex-shrink: 0;
+    height: auto;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: #9803CC;
+    height: 1rem;
+    width: 1rem;
+}
+
+.swiper-backface-hidden .swiper-slide {
+    margin-bottom: 8rem;
 }
 
 .reviews{
@@ -730,3 +743,4 @@ hr{
 
    
 }
+
