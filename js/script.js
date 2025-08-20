@@ -7,8 +7,6 @@ menuBtn.onclick = () =>{
 }  
 
 var swiper = new Swiper(".cursosSlider", {
-    slidesPerView: 4,
-    spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -33,4 +31,5 @@ var swiper = new Swiper(".cursosSlider", {
         },
 
     }
+
   });
