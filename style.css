@@ -84,6 +84,12 @@ html{
     font-size: 2.5rem;
 }
 
+.fa-bars:before, .fa-navicon:before {
+    font-size: 6rem;
+    padding: 0 6rem; 
+    content: "\f0c9";
+}
+
 .home{
     display:flex;
     background: url(imagenes/fondo1.png) no-repeat;
@@ -127,15 +133,17 @@ span{
     align-items: center;
     gap: 3rem;
     flex-direction:row;
+    align-content: center;
+    justify-content: center;
 }
 
 .about .interno img{
     width:40rem;
 }
 .about .interno .content{
-    flex: 1 1 20rem;
+    flex: 1 1 30rem;
     text-align:justify;
-    padding-left: 5rem;
+    padding: 4rem 0;
 }
 
 .about .interno .content h3{
@@ -246,17 +254,19 @@ span{
 }
 
 .cursos .slide{
+    background-color: white;
     border-radius:1rem ;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 3rem;
     align-items: center;
     align-content: center;
+    justify-content: center;
     text-align: center;
 }
 
 .cursos .slide img{
     display:flex;
-    width: 90%;
+    width: 85%;
     margin: 0 2rem;
     border-radius:1rem ;
 }
@@ -285,7 +295,8 @@ span{
 }
 
 .cursos .swiper {
-    max-width: 900px;
+    display: flex;
+    max-width: 800px;
     height: 500px;
 }
 .cursos .swiper-wrapper {
@@ -293,6 +304,7 @@ span{
 }
 
 .cursos .swiper-wrapper .swiper-slide {
+    padding: 1rem;
     flex-shrink: 0;
     height: auto;
 }
@@ -707,6 +719,10 @@ hr{
         flex-direction: column;
         margin: 0 10rem;
     }
+    .cursos .container .swiper {
+        width: 600px;
+        height: fit-content;
+    }
 
     .reviews .container{
         justify-content: center;
@@ -782,14 +798,18 @@ hr{
         font-size: 8rem;
        margin: 0 5rem;
     }
+    .cursos .container {
+    display: flex;
+    flex-direction: column;
+}
 
     .cursos .container .imgCursos {
         order: 1; 
         margin-bottom: 20px; 
     }
     .cursos .container .swiper {
-        width: 200px;
-        height: auto;
+        width: 300px;
+        height: fit-content;
     }
 
     .descripcion .interno{
@@ -797,4 +817,3 @@ hr{
         flex-direction: column;
     }
 }
-
