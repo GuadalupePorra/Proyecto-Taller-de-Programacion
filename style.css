@@ -702,6 +702,12 @@ hr{
         font-size: 10rem;
     }
 
+    .cursos .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10rem;
+    }
+
     .reviews .container{
         justify-content: center;
     }
@@ -776,18 +782,14 @@ hr{
         font-size: 8rem;
        margin: 0 5rem;
     }
-    .cursos .container {
-        display: flex;
-        flex-direction: column;
-        margin: 0 10rem;
-    }
+
     .cursos .container .imgCursos {
         order: 1; 
         margin-bottom: 20px; 
     }
     .cursos .container .swiper {
-        width: 100%; 
-
+        width: 200px;
+        height: auto;
     }
 
     .descripcion .interno{
@@ -795,3 +797,4 @@ hr{
         flex-direction: column;
     }
 }
+
